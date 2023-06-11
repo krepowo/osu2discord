@@ -1,6 +1,6 @@
 # osu2discord
 ![preview](https://i.postimg.cc/ZKtQNTJ4/image.png)
-osu2discord is using webhook to send osu! chat to discord channel
+osu2discord is using webhook to send osu! in-game chat to discord channel
 
 ### How to use
 1. `git clone https://github.com/krepowo/osu2discord.git`
