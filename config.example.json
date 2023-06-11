@@ -1,0 +1,19 @@
+{
+    "auth": {
+        "username": "",
+        "password": ""
+    },
+    "apiKey": {
+        "osu": ""
+    },
+    "webhook": {
+        "#osu": "",
+        "#indonesian": "",
+        "#lobby": ""
+    },
+    "channel": [
+        "#osu",
+        "#indonesian",
+        "#lobby"
+    ]
+}
