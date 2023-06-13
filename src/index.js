@@ -1,5 +1,5 @@
 const { default: axios } = require('axios');
-const { BanchoClient } = require('bancho.js');
+const { BanchoClient, ChannelMessage } = require('bancho.js');
 const { Api } = require('node-osu');
 const config = require('../config.json');
 
@@ -14,21 +14,20 @@ const api = new Api(config.apiKey.osu);
 
 config.channel.forEach(ch => {
     const channel = client.getChannel(ch);
-    channel.on('message', async (msg) => {
+    channel.on('message', (msg) => {
         sendDiscord(msg, ch);
     });
 });
 
-client.connect().then(async () => {
+client.connect().then(() => {
     log("[BANCHO] Connected to bancho!");
     config.channel.forEach(ch => {
-        client.getChannel(ch).join();
-        log(`[BANCHO] Joined ${ch}`);
+        client.getChannel(ch).join().then(log(`[BANCHO] Joined ${ch}`));
     });
 });
 
-process.on('unhandledRejection', (reason, promise) => {
-    log(`Unhandled Rejection: ${promise}\n ${reason}`);
+process.on('unhandledRejection', (reason) => {
+    log(`Unhandled Rejection: \n ${reason}`);
 });
 
 //sometimes api.getUser() is fail, so this will retrying
@@ -120,6 +119,6 @@ async function sendDiscord(msg, ch) {
             "embeds": embed ? [embed] : []
         }
     }).catch(error => {
-        log(error);
+        log(error.cause);
     });
 }
