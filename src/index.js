@@ -116,9 +116,14 @@ async function sendDiscord(msg, ch) {
             "avatar_url": "https://a.ppy.sh/" + userapi.id,
             "content": content,
             "tts": false,
+            "allowed_mentions": {
+                "parse": []
+            },
             "embeds": embed ? [embed] : []
         }
     }).catch(error => {
-        log(error.cause);
+        if (error.response) {
+            log(error.response.data);
+        }
     });
 }
