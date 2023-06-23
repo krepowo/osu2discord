@@ -12,6 +12,7 @@ osu2discord is using webhook to send osu! in-game chat to discord channel
 
 ### Contact me
 Discord: **krepowo**
+
 osu!: https://osu.ppy.sh/users/23622091
 
 ### License
