@@ -9,11 +9,13 @@
     "webhook": {
         "#osu": "",
         "#indonesian": "",
-        "#lobby": ""
+        "#lobby": "",
+        "PM": ""
     },
     "channel": [
         "#osu",
         "#indonesian",
-        "#lobby"
+        "#lobby",
+        "PM"
     ]
 }

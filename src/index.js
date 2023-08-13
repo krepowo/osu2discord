@@ -13,15 +13,21 @@ const api = new Api(config.apiKey.osu);
 
 
 config.channel.forEach(ch => {
+    if (ch === "PM") return;
     const channel = client.getChannel(ch);
     channel.on('message', (msg) => {
         sendDiscord(msg, ch);
     });
 });
 
+client.on('PM', (msg) => {
+    sendDiscord(msg, 'PM');
+});
+
 client.connect().then(() => {
     log("[BANCHO] Connected to bancho!");
     config.channel.forEach(ch => {
+        if (ch === "PM") return;
         client.getChannel(ch).join().then(log(`[BANCHO] Joined ${ch}`));
     });
 });
