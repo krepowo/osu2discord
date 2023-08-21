@@ -11,7 +11,8 @@ osu2discord is using webhook to send osu! in-game chat to discord channel
 6. `npm run start` or `node .` or and `yarn start`
 
 ### Contact me
-Discord: 0xKrepOwO#2183
+Discord: **krepowo**
+
 osu!: https://osu.ppy.sh/users/23622091
 
 ### License
