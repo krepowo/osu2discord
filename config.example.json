@@ -17,5 +17,6 @@
         "#indonesian",
         "#lobby",
         "PM"
-    ]
+    ],
+    "enable_pm": false
 }
