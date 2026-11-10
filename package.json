@@ -1,18 +1,20 @@
 {
   "name": "osu2discord",
-  "version": "1.0.0",
-  "description": "an osu irc client",
+  "version": "1.1.0",
+  "description": "Bridge osu! in-game chat to Discord via webhooks",
   "main": "src/index.js",
   "author": "krepowo",
   "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "dev": "nodemon",
-    "start": "node ."
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
   },
   "dependencies": {
-    "axios": "^1.4.0",
-    "bancho.js": "^0.11.0",
-    "node-osu": "^2.2.1",
-    "weak-value-map": "^1.0.1"
+    "axios": "^1.7.0",
+    "bancho.js": "^0.11.6",
+    "node-osu": "^2.2.1"
   }
 }

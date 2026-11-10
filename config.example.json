@@ -1,22 +1,24 @@
 {
-    "auth": {
-        "username": "",
-        "password": ""
-    },
-    "apiKey": {
-        "osu": ""
-    },
-    "webhook": {
-        "#osu": "",
-        "#indonesian": "",
-        "#lobby": "",
-        "PM": ""
-    },
-    "channel": [
-        "#osu",
-        "#indonesian",
-        "#lobby",
-        "PM"
-    ],
-    "enable_pm": false
+  "auth": {
+    "username": "",
+    "password": ""
+  },
+  "apiKey": {
+    "osu": ""
+  },
+  "webhook": {
+    "#osu": "",
+    "#indonesian": "",
+    "#lobby": "",
+    "PM": ""
+  },
+  "channel": [
+    "#osu",
+    "#indonesian",
+    "#lobby",
+    "PM"
+  ],
+  "enable_pm": false,
+  "card_style": "v2",
+  "cache_cap": 20000
 }
